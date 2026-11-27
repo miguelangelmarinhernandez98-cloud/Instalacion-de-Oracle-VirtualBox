@@ -1,0 +1,8 @@
+site_name: "Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages)"
+site_description: Documento explicativo para el despliegue de una aplicación
+site_author: Miguel Ángel Marín Hernández y Nicolás Romero Rubiales
+
+theme:
+  name: shadcn
+  show_title: true
+  show_stargazers: false
