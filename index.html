@@ -1,460 +1,239 @@
-
-<!doctype html>
-<html lang="es" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Documento explicativo para el despliegue de una aplicación">
-      
-      
         <meta name="author" content="Miguel Ángel Marín Hernández y Nicolás Romero Rubiales">
-      
-      
-      
-      
-      
         
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
-    
-    
-      
+        <link rel="shortcut icon" href="img/favicon.ico">
         <title>Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages).</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.57a0d79d.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.fb2fffe2.min.css">
-      
-      
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <style>
+            html { scroll-behavior: smooth; }
+            [id] { scroll-margin-top: 70px; }
+        </style>
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
 
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages).</a>
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
 
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#welcome-to-mkdocs" class="md-skip">
-          Saltar a contenido
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages)." class="md-header__button md-logo" aria-label="Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages)." data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages).
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Welcome to MkDocs
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Cambiar a modo Oscuro"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo Oscuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Cambiar a modo Claro"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Cambiar a modo Claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Buscar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando búsqueda
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages)." class="md-nav__button md-logo" aria-label="Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages)." data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    Guia de instalacion y uso de una aplicación (Creación y despliegue de documentacion con MKdocs y Github Pages).
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Welcome to MkDocs
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Welcome to MkDocs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project layout
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project layout
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+    <ul class="nav flex-column">
+        <li class="nav-item" data-bs-level="1">
+            <a href="#guia-virtualbox" class="nav-link">Guía: Oracle VirtualBox</a>
+            <ul class="nav flex-column">
+                <li class="nav-item" data-bs-level="2"><a href="#inicio" class="nav-link">1. Inicio</a></li>
+                <li class="nav-item" data-bs-level="2"><a href="#introduccion" class="nav-link">2. Introducción</a></li>
+                <li class="nav-item" data-bs-level="2"><a href="#requisitos" class="nav-link">3. Requisitos</a></li>
+                <li class="nav-item" data-bs-level="2">
+                    <a href="#instalacion-uso" class="nav-link">4. Instalación y uso</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item" data-bs-level="3"><a href="#descarga" class="nav-link">4.1. Descarga</a></li>
+                        <li class="nav-item" data-bs-level="3"><a href="#instalacion" class="nav-link">4.2. Instalación</a></li>
+                        <li class="nav-item" data-bs-level="3"><a href="#primer-arranque" class="nav-link">4.3. Primer arranque</a></li>
+                        <li class="nav-item" data-bs-level="3"><a href="#crear-vm" class="nav-link">4.4. Crear la máquina virtual</a></li>
+                        <li class="nav-item" data-bs-level="3"><a href="#uso-vm" class="nav-link">4.5. Uso de la máquina</a></li>
+                        <li class="nav-item" data-bs-level="3"><a href="#configuracion-vm" class="nav-link">4.6. Configuración</a></li>
+                        <li class="nav-item" data-bs-level="3"><a href="#menus-principales" class="nav-link">4.7. Menús principales</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>
-      
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<center><h2 id="guia-virtualbox"><strong>Guía de Instalación y Uso de MkDocs: Oracle VirtualBox</strong></h2></center>
+
+<center><img src="img/portada.jpg" alt="Imagen de VirtualBox" class="img-fluid"></center>
+
+<p id="inicio"><strong>1. Inicio.</strong></p>
+<p>Mediante las herramientas MkDocs y GitHub Pages vamos a realizar un proyecto técnico para una empresa o clientes sobre una guía de instalación, configuración y uso de VirtualBox.</p>
+<p>Este proyecto tiene como objetivo que cualquier persona que nunca haya utilizado esta aplicación y la vaya a usar por primera vez pueda tener los conocimientos “mínimos” para poder crear máquinas virtuales y configurarlas a sus gustos.</p>
+<p>Autores del proyecto: Nicolás Romero Rubiales y Miguel Ángel Marín Hernández.</p>
+
+<p id="introduccion"><strong>2. Introducción.</strong></p>
+<p><strong>2.1. ¿Qué es?</strong></p>
+<p>Oracle VirtualBox es una herramienta de virtualización de escritorio que permite a los usuarios ejecutar múltiples sistemas operativos en una única máquina física. Esto quiere decir que si tienes un ordenador con Windows/Linux/macOS puedes crear una máquina virtual con cualquier otro sistema operativo dentro de él para utilizarlo. Además, al ser de código abierto, es accesible y utilizado en diversas aplicaciones, desde pruebas de software hasta entornos de desarrollo.</p>
+<p>Fue creado por la empresa alemana Innotek GmbH y actualmente es desarrollado por Oracle Corporation.</p>
+
+<p id="caracteristicas"><strong>2.2. Características principales.</strong></p>
+<p>VirtualBox ofrece bastante más que una ventana donde arrancar otro sistema. Entre las funciones que utilizaremos a lo largo de esta serie se encuentran:</p>
+<p>· Snapshots para guardar puntos de estado de una VM.</p>
+<p>· Clonado de máquinas virtuales.</p>
+<p>· Redes NAT, bridge, host-only, internal network y NAT Network.</p>
+<p>· Firmware BIOS y UEFI según arquitectura y configuración.</p>
+<p>· TPM virtual en escenarios compatibles.</p>
+<p>· Discos virtuales VDI, VMDK y otros formatos soportados.</p>
+<p>· Controladores de almacenamiento SATA, SCSI, NVMe y otros según plataforma.</p>
+<p>· Guest Additions para mejorar la integración con el sistema invitado.</p>
+<p>· Passthrough de determinados dispositivos USB.</p>
+<p>· Importación y exportación OVF/OVA.</p>
+<p>· Administración por línea de comandos con VBoxManage.</p>
+<p>· Modo headless para ejecutar VMs sin mantener abierta la interfaz gráfica.</p>
+
+<p id="requisitos"><strong>3. Requisitos.</strong></p>
+<p>Para una instalación correcta de VirtualBox en un ordenador necesitarás:</p>
+<p><strong>Hardware:</strong></p>
+<p>Procesador: Se recomienda un procesador con soporte de virtualización por hardware. Puede ser Intel VT-x o AMD-V.</p>
+<p>Memoria RAM: Al menos 2GB de RAM dedicada a VirtualBox, aunque es recomendable más para un rendimiento óptimo.</p>
+<p><strong>Espacio de almacenamiento:</strong></p>
+<p>Al menos 200MB de espacio disponible en el disco duro para la instalación del software.</p>
+<p><strong>Sistema operativo:</strong></p>
+<p>Virtualbox es compatible con una amplia gama de sistemas operativos, incluyendo Windows, macOS, Linux y Solaris.</p>
+<p><strong>Otros requisitos:</strong></p>
+<p>Acceso de administrador: Es posible que necesites permisos de administrador en el sistema para poder instalar VirtualBox correctamente.</p>
+<p>Conexión a internet: Para poder descargar la última versión de VirtualBox, con sus respectivas imágenes de sistemas operativos.</p>
+
+<p id="instalacion-uso"><strong>4. Instalación y uso.</strong></p>
+
+<p id="descarga"><strong>4.1. Descarga. (capturas 01 y 02)</strong></p>
+<p>Entramos en la página oficial de VirtualBox y nos vamos al apartado de descargas, elegimos el sistema operativo en el que queremos el ejecutable, en este caso Windows hosts. La página ofrece la última versión. Una vez hecho, aparece descargado el .exe, lo siguiente sería darle doble clic para comenzar la instalación.</p>
+<div class="my-3 text-center">
+    <img src="img/cap01.png" alt="Captura 01 - Página de descarga de VirtualBox" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap02.png" alt="Captura 02 - Ejecutable descargado" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+<p id="instalacion"><strong>4.2. Instalación. (capturas 03 - 10)</strong></p>
+<p>Comenzada la instalación, la primera pantalla nos da la bienvenida del asistente y nos muestra la versión de VirtualBox con la arquitectura de 64 bits, le damos a “Next” y nos lleva a la siguiente pantalla en la que nos muestra el contrato de la licencia, gran parte del código GPL, marcamos el cuadro de que aceptamos los términos y le damos a “Next”. La siguiente nos indica la selección de componentes, como VirtualBox Application, USB support, etc. Los componentes se dejan por defecto y la ruta nos indica dónde se ubica la instalación. Le damos a “Next” y en el siguiente apartado vemos un aviso que indica que la red se desconectará durante unos segundos durante la instalación, le damos a “Yes” y continuamos. En la siguiente pantalla nos indica que, si queremos usar VirtualBox desde Python, hacen falta una serie de componentes, le damos a “Yes”. Después aparecen las opciones de inicio: añadir al menú de inicio, crear un acceso directo al escritorio y abrir los archivos OVA y OVF de VirtualBox. Se dejan marcadas como aparecen y le damos a “Next”. Ya está listo para la instalación, indicamos “Install” y se procede a instalar todo. Por último, nos muestra que la instalación ha terminado y le damos a “Finish”.</p>
+<div class="my-3 text-center">
+    <img src="img/cap03.png" alt="Captura 03 - Bienvenida del asistente" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap04.png" alt="Captura 04 - Contrato de licencia" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap05.png" alt="Captura 05 - Selección de componentes" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap06.png" alt="Captura 06 - Aviso de desconexión de red" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap07.png" alt="Captura 07 - Dependencias de Python" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap08.png" alt="Captura 08 - Opciones de inicio" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap09.png" alt="Captura 09 - Listo para instalar" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap10.png" alt="Captura 10 - Instalación finalizada" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+<p id="primer-arranque"><strong>4.3. Primer arranque. (captura 11)</strong></p>
+<p>Se abre el administrador de VirtualBox, esta es la pantalla principal donde aparecerán todos los sistemas operativos que tengas.</p>
+<div class="my-3 text-center">
+    <img src="img/cap11.png" alt="Captura 11 - Pantalla principal de VirtualBox" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+<p id="crear-vm"><strong>4.4. Crear la máquina virtual. (capturas 12-16)</strong></p>
+<p>Para crear una máquina le damos al botón de “Nueva” y se abren las siguientes pestañas en las que tenemos que configurarlo como queramos. En la primera indicamos el nombre, la carpeta de las máquinas y, si tenemos la imagen ISO del sistema operativo, la seleccionamos. Una vez puesta la ISO, VirtualBox detecta el sistema operativo y su arquitectura. En la siguiente pestaña podemos poner el nombre y la contraseña del usuario y también indicar si queremos instalar las Guest Additions. En la siguiente indicamos cuánta memoria RAM y procesadores queremos utilizar en la máquina y, por último, cuántos GB utilizaremos en el disco duro. Una vez terminado podemos ver que se está iniciando Ubuntu junto con las características configuradas de dicha máquina.</p>
+<div class="my-3 text-center">
+    <img src="img/cap12.png" alt="Captura 12 - Nombre y sistema operativo" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap13.png" alt="Captura 13 - Instalación desatendida y usuario" class="img-fluid mb-3 border rounded shadow-sm">
+
+    <img src="img/cap14.png" alt="Captura 14 - Asignación de memoria RAM y CPU" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap15.png" alt="Captura 15 - Creación de disco duro virtual" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap16.png" alt="Captura 16 - Resumen e inicio de la máquina" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+<p id="uso-vm"><strong>4.5. Uso de la máquina. (capturas 17-18)</strong></p>
+<p>Vemos que Ubuntu se ha arrancado correctamente y podemos utilizarlo como cualquier otro sistema operativo.</p>
+<p>Cuando apagamos la máquina aparece “Apagada” y la unidad óptica aparece vacía, ya que la ISO ya no se utiliza.</p>
+<div class="my-3 text-center">
+    <img src="img/cap17.png" alt="Captura 17 - Ubuntu funcionando" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap18.png" alt="Captura 18 - Máquina virtual apagada" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+<p id="configuracion-vm"><strong>4.6. Configuración de la máquina virtual Ubuntu. (capturas 19-21)</strong></p>
+<p>Entramos en la configuración de Ubuntu Desktop y podemos destacar varias opciones y modificarlas. Las pestañas de General, Sistema, Almacenamiento y Red son las más destacadas, pudiendo modificar o añadir más almacenamiento o adaptadores de red en las máquinas.</p>
+<div class="my-3 text-center">
+    <img src="img/cap19.png" alt="Captura 19 - Configuración General y Sistema" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap20.png" alt="Captura 20 - Configuración de Almacenamiento" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap21.png" alt="Captura 21 - Configuración de Red" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+<p id="menus-principales"><strong>4.7. Menús principales. (capturas 22-23)</strong></p>
+<p>En la pestaña inicial, en la parte superior izquierda existen varias pestañas que sirven como menús con distintas opciones. La primera es “Archivo”, donde están las preferencias y ajustes generales, importar y/o exportar servicios virtualizados, herramientas, actualizaciones y advertencias. Después está la pestaña “Máquina”, en la que encontramos acciones como Nueva, para crear una máquina virtual; Clonar, para duplicar una máquina; Mover y Eliminar; y iniciar, pausar, reiniciar y parar las máquinas, entre muchas otras opciones.</p>
+<div class="my-3 text-center">
+    <img src="img/cap22.png" alt="Captura 22 - Menú Archivo" class="img-fluid mb-3 border rounded shadow-sm">
+    <img src="img/cap23.png" alt="Captura 23 - Menú Máquina" class="img-fluid mb-3 border rounded shadow-sm">
+</div>
+
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-  </div>
-</footer>
-      
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
-    
-    
-      <script src="assets/javascripts/bundle.a5f9d56c.min.js"></script>
-      
-    
-  </body>
+</div>
+
+    </body>
 </html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-11-19 19:58:31.998363+00:00
+-->
