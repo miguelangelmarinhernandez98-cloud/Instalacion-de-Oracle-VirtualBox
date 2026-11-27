@@ -1,0 +1,25 @@
+<div class="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+    {% include "templates/partials/search_button.html" %}
+</div>
+<dialog id="search-dialog" onclick="onSearchDialogClick(event)"
+    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background rounded-lg shadow-lg border overflow-hidden p-0">
+    <div class="w-lg gap-4">
+        <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground">
+            <div data-slot="command-input-wrapper" class="flex h-9 items-center gap-2 border-b px-3">
+                {% include "templates/icons/search.svg" %}
+                <input data-slot="command-input"
+                    class="placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50"
+                    placeholder="{{ _('Buscar en la guía...') }}" cmdk-input="" autocomplete="off" autocorrect="off"
+                    spellcheck="false" aria-label="{{ _('Search documentation') }}" type="search" value=""
+                    oninput="onInputHandler(event)">
+            </div>
+        </div>
+        <div id="{% if is_properdocs %}properdocs-search-results{% else %}mkdocs-search-results{% endif %}">
+            <!-- search results go there -->
+        </div>
+    </div>
+</dialog>
+<script>
+    document.removeEventListener("keydown", searchShortcutHandler);
+    document.addEventListener("keydown", searchShortcutHandler);
+</script>
