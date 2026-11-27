@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: "Guía de instalación y uso de Oracle VirtualBox"
+site_description: Documento explicativo para la instalación y uso de VirtualBox
+site_author: Miguel Ángel Marín Hernández y Nicolás Romero Rubiales
+
+theme:
+  name: shadcn
+  show_title: true
+  show_stargazers: false
