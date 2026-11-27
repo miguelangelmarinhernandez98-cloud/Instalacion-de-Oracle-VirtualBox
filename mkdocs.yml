@@ -4,5 +4,6 @@ site_author: Miguel Ángel Marín Hernández y Nicolás Romero Rubiales
 
 theme:
   name: shadcn
+  custom_dir: overrides
   show_title: true
   show_stargazers: false
