@@ -49,14 +49,14 @@ Para una instalación correcta de VirtualBox en un ordenador necesitarás:
 
 ## 4. Instalación y uso
 
-### 4.1. Descarga (capturas 01 y 02)
+### 4.1. Descarga
 
 Entramos en la página oficial de VirtualBox y nos vamos al apartado de descargas, elegimos el sistema operativo en el que queremos el ejecutable, en este caso **Windows hosts**. La página ofrece la última versión. Una vez hecho, aparece descargado el `.exe`, lo siguiente sería darle doble clic para comenzar la instalación.
 
 ![Captura 01 - Página de descarga de VirtualBox](img/cap01.png)
 ![Captura 02 - Ejecutable descargado](img/cap02.png)
 
-### 4.2. Instalación (capturas 03 - 10)
+### 4.2. Instalación
 
 Comenzada la instalación, la primera pantalla nos da la bienvenida del asistente y nos muestra la versión de VirtualBox con la arquitectura de 64 bits, le damos a **Next** y nos lleva a la siguiente pantalla en la que nos muestra el contrato de la licencia, gran parte del código GPL, marcamos el cuadro de que aceptamos los términos y le damos a **Next**. La siguiente nos indica la selección de componentes, como VirtualBox Application, USB support, etc. Los componentes se dejan por defecto y la ruta nos indica dónde se ubica la instalación. Le damos a **Next** y en el siguiente apartado vemos un aviso que indica que la red se desconectará durante unos segundos durante la instalación, le damos a **Yes** y continuamos.
 En la siguiente pantalla nos indica que, si queremos usar VirtualBox desde Python, hacen falta una serie de componentes, le damos a **Yes**. Después aparecen las opciones de inicio: añadir al menú de inicio, crear un acceso directo al escritorio y abrir los archivos OVA y OVF de VirtualBox. Se dejan marcadas como aparecen y le damos a **Next**. Ya está listo para la instalación, indicamos **Install** y se procede a instalar todo. Por último, nos muestra que la instalación ha terminado y le damos a **Finish**.
@@ -70,13 +70,13 @@ En la siguiente pantalla nos indica que, si queremos usar VirtualBox desde Pytho
 ![Captura 09 - Listo para instalar](img/cap09.png)
 ![Captura 10 - Instalación finalizada](img/cap10.png)
 
-### 4.3. Primer arranque (captura 11)
+### 4.3. Primer arranque
 
 Se abre el administrador de VirtualBox, esta es la pantalla principal donde aparecerán todos los sistemas operativos que tengas.
 
 ![Captura 11 - Pantalla principal de VirtualBox](img/cap11.png)
 
-### 4.4. Crear la máquina virtual (capturas 12 - 16)
+### 4.4. Crear la máquina virtual
 
 Para crear una máquina le damos al botón de **Nueva** y se abren las siguientes pestañas en las que tenemos que configurarlo como queramos. En la primera indicamos el nombre, la carpeta de las máquinas y, si tenemos la imagen ISO del sistema operativo, la seleccionamos. Una vez puesta la ISO, VirtualBox detecta el sistema operativo y su arquitectura. En la siguiente pestaña podemos poner el nombre y la contraseña del usuario y también indicar si queremos instalar las Guest Additions. En la siguiente indicamos cuánta memoria RAM y procesadores queremos utilizar en la máquina y, por último, cuántos GB utilizaremos en el disco duro. Una vez terminado podemos ver que se está iniciando Ubuntu junto con las características configuradas de dicha máquina.
 
@@ -86,7 +86,7 @@ Para crear una máquina le damos al botón de **Nueva** y se abren las siguiente
 ![Captura 15 - Creación de disco duro virtual](img/cap15.png)
 ![Captura 16 - Resumen e inicio de la máquina](img/cap16.png)
 
-### 4.5. Uso de la máquina (capturas 17 - 18)
+### 4.5. Uso de la máquina
 
 Vemos que Ubuntu se ha arrancado correctamente y podemos utilizarlo como cualquier otro sistema operativo.
 Cuando apagamos la máquina aparece **Apagada** y la unidad óptica aparece vacía, ya que la ISO ya no se utiliza.
@@ -94,7 +94,7 @@ Cuando apagamos la máquina aparece **Apagada** y la unidad óptica aparece vac�
 ![Captura 17 - Ubuntu funcionando](img/cap17.png)
 ![Captura 18 - Máquina virtual apagada](img/cap18.png)
 
-### 4.6. Configuración de la máquina virtual Ubuntu (capturas 19 - 21)
+### 4.6. Configuración de la máquina virtual Ubuntu
 
 Entramos en la configuración de Ubuntu Desktop y podemos destacar varias opciones y modificarlas. Las pestañas de **General**, **Sistema**, **Almacenamiento** y **Red** son las más destacadas, pudiendo modificar o añadir más almacenamiento o adaptadores de red en las máquinas.
 
@@ -102,7 +102,7 @@ Entramos en la configuración de Ubuntu Desktop y podemos destacar varias opcion
 ![Captura 20 - Configuración de Almacenamiento](img/cap20.png)
 ![Captura 21 - Configuración de Red](img/cap21.png)
 
-### 4.7. Menús principales (capturas 22 - 23)
+### 4.7. Menús principales
 
 En la pestaña inicial, en la parte superior izquierda existen varias pestañas que sirven como menús con distintas opciones. La primera es **Archivo**, donde están las preferencias y ajustes generales, importar y/o exportar servicios virtualizados, herramientas, actualizaciones y advertencias. Después está la pestaña **Máquina**, en la que encontramos acciones como **Nueva**, para crear una máquina virtual; **Clonar**, para duplicar una máquina; **Mover** y **Eliminar**; e iniciar, pausar, reiniciar y parar las máquinas, entre muchas otras opciones.
 
