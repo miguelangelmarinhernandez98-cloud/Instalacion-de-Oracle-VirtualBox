@@ -3,8 +3,8 @@ site_description: Documento explicativo para el despliegue de una aplicación
 site_author: Miguel Ángel Marín Hernández y Nicolás Romero Rubiales
 
 theme:
-  name: mkdocs
-  languaje: es
+  name: material
+  language: es
   palette:
     - scheme: default
       primary: indigo
