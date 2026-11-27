@@ -355,7 +355,69 @@ En la siguiente pantalla nos indica que, si queremos usar VirtualBox desde Pytho
 <img alt="Captura 10 - Instalación finalizada" src="img/cap10.png" /></p>
 <h3 id="43-primer-arranque-captura-11">4.3. Primer arranque (captura 11)</h3>
 <p>Se abre el administrador de VirtualBox, esta es la pantalla principal donde aparecerán todos los sistemas operativos que tengas.</p>
-<p>![Captura 11 - Pantalla principal de VirtualBox](img/cap1</p>
+<p><img alt="Captura 11 - Pantalla principal de VirtualBox" src="img/cap11.png" /></p>
+<h3 id="44-crear-la-maquina-virtual-capturas-12-16">4.4. Crear la máquina virtual (capturas 12 - 16)</h3>
+<p>Para crear una máquina le damos al botón de <strong>Nueva</strong> y se abren las siguientes pestañas en las que tenemos que configurarlo como queramos. En la primera indicamos el nombre, la carpeta de las máquinas y, si tenemos la imagen ISO del sistema operativo, la seleccionamos. Una vez puesta la ISO, VirtualBox detecta el sistema operativo y su arquitectura. En la siguiente pestaña podemos poner el nombre y la contraseña del usuario y también indicar si queremos instalar las Guest Additions. En la siguiente indicamos cuánta memoria RAM y procesadores queremos utilizar en la máquina y, por último, cuántos GB utilizaremos en el disco duro. Una vez terminado podemos ver que se está iniciando Ubuntu junto con las características configuradas de dicha máquina.</p>
+<p><img alt="Captura 12 - Nombre y sistema operativo" src="img/cap12.png" />
+<img alt="Captura 13 - Instalación desatendida y usuario" src="img/cap13.png" />
+<img alt="Captura 14 - Asignación de memoria RAM y CPU" src="img/cap14.png" />
+<img alt="Captura 15 - Creación de disco duro virtual" src="img/cap15.png" />
+<img alt="Captura 16 - Resumen e inicio de la máquina" src="img/cap16.png" /></p>
+<h3 id="45-uso-de-la-maquina-capturas-17-18">4.5. Uso de la máquina (capturas 17 - 18)</h3>
+<p>Vemos que Ubuntu se ha arrancado correctamente y podemos utilizarlo como cualquier otro sistema operativo.
+Cuando apagamos la máquina aparece <strong>Apagada</strong> y la unidad óptica aparece vacía, ya que la ISO ya no se utiliza.</p>
+<p><img alt="Captura 17 - Ubuntu funcionando" src="img/cap17.png" />
+<img alt="Captura 18 - Máquina virtual apagada" src="img/cap18.png" /></p>
+<h3 id="46-configuracion-de-la-maquina-virtual-ubuntu-capturas-19-21">4.6. Configuración de la máquina virtual Ubuntu (capturas 19 - 21)</h3>
+<p>Entramos en la configuración de Ubuntu Desktop y podemos destacar varias opciones y modificarlas. Las pestañas de <strong>General</strong>, <strong>Sistema</strong>, <strong>Almacenamiento</strong> y <strong>Red</strong> son las más destacadas, pudiendo modificar o añadir más almacenamiento o adaptadores de red en las máquinas.</p>
+<p><img alt="Captura 19 - Configuración General y Sistema" src="img/cap19.png" />
+<img alt="Captura 20 - Configuración de Almacenamiento" src="img/cap20.png" />
+<img alt="Captura 21 - Configuración de Red" src="img/cap21.png" /></p>
+<h3 id="47-menus-principales-capturas-22-23">4.7. Menús principales (capturas 22 - 23)</h3>
+<p>En la pestaña inicial, en la parte superior izquierda existen varias pestañas que sirven como menús con distintas opciones. La primera es <strong>Archivo</strong>, donde están las preferencias y ajustes generales, importar y/o exportar servicios virtualizados, herramientas, actualizaciones y advertencias. Después está la pestaña <strong>Máquina</strong>, en la que encontramos acciones como <strong>Nueva</strong>, para crear una máquina virtual; <strong>Clonar</strong>, para duplicar una máquina; <strong>Mover</strong> y <strong>Eliminar</strong>; e iniciar, pausar, reiniciar y parar las máquinas, entre muchas otras opciones.</p>
+<p><img alt="Captura 22 - Menú Archivo" src="img/cap22.png" />
+<img alt="Captura 23 - Menú Máquina" src="img/cap23.png" /></p>
+<h2 id="5-funcionamiento-y-beneficios">5. Funcionamiento y beneficios</h2>
+<p>VirtualBox permite crear entornos que serían incómodos o costosos de reproducir con hardware físico. Algunos usos habituales son:</p>
+<ul>
+<li>Probar una distribución GNU/Linux sin reemplazar el sistema principal.</li>
+<li>Mantener laboratorios con varias versiones de Windows y Linux.</li>
+<li>Desarrollar y probar software en diferentes sistemas operativos.</li>
+<li>Montar redes virtuales para estudiar administración, routing o seguridad.</li>
+<li>Probar actualizaciones y configuraciones antes de aplicarlas a un equipo real.</li>
+<li>Crear snapshots para experimentar y regresar rápidamente a un estado anterior.</li>
+<li>Importar y exportar appliances en formatos OVF/OVA.</li>
+<li>Automatizar máquinas virtuales mediante VBoxManage.</li>
+<li>Ejecutar entornos temporalmente aislados del sistema principal.</li>
+</ul>
+<p>La virtualización no hace que los recursos sean infinitos. Si creamos cuatro VMs y asignamos 8 GB de RAM a cada una, el host necesita disponer de memoria suficiente para sostenerlas además de ejecutar su propio sistema operativo.</p>
+<h3 id="beneficios-de-usar-la-virtualizacion">Beneficios de usar la virtualización</h3>
+<p>Ofrece una serie de beneficios significativos para individuos y organizaciones, entre los que destacan:</p>
+<ul>
+<li><strong>Optimización de recursos:</strong> La virtualización permite utilizar de manera más eficiente los recursos de hardware al permitir que múltiples sistemas operativos y aplicaciones se ejecuten en un único servidor físico. Esto reduce la necesidad de tener múltiples servidores físicos, lo que ahorra espacio, energía y costos de mantenimiento.</li>
+<li><strong>Flexibilidad y escalabilidad:</strong> La virtualización permite crear y desplegar rápidamente nuevas máquinas virtuales según sea necesario, lo que facilita la adaptación a cambios en la demanda de recursos informáticos. Esto permite a las organizaciones escalar sus recursos de TI de manera más eficiente para satisfacer las necesidades del negocio.</li>
+<li><strong>Facilita el desarrollo y la prueba:</strong> La virtualización proporciona un entorno aislado y seguro para el desarrollo y la prueba de software. Los desarrolladores pueden crear fácilmente entornos de desarrollo reproducibles y los probadores pueden probar aplicaciones en diferentes configuraciones de sistemas operativos sin afectar el entorno de producción.</li>
+<li><strong>Recuperación ante desastres y alta disponibilidad:</strong> Mediante la virtualización, es posible realizar copias de seguridad completas de las máquinas virtuales, lo que facilita la recuperación ante desastres y la continuidad del negocio en caso de fallo del hardware o de otros eventos catastróficos. Además, la migración en caliente y otras tecnologías de alta disponibilidad permiten mantener las aplicaciones en funcionamiento incluso durante el mantenimiento del hardware o la actualización del software.</li>
+<li><strong>Consolidación del centro de datos:</strong> La virtualización permite consolidar múltiples servidores físicos en un único servidor físico o en un conjunto de servidores físicos. Esto puede reducir significativamente la cantidad de hardware necesario en un centro de datos, lo que a su vez reduce los costos de adquisición, energía y refrigeración, así como simplifica la gestión y el mantenimiento del entorno de TI.</li>
+</ul>
+<h2 id="6-conclusiones-y-aprendizajes">6. Conclusiones y aprendizajes</h2>
+<p>En resumen, VirtualBox es una herramienta muy sencilla y fácil de usar para tener y utilizar varios sistemas operativos en un mismo ordenador. Permite probar configuraciones de software en un entorno aislado y con opciones de volver atrás con las instantáneas. Es muy recomendable para el aprendizaje sobre sistemas operativos y administración de dichos sistemas ya que no hay riesgo en el ordenador principal.</p>
+<ul>
+<li>Distinguir entre el equipo anfitrión y el invitado.</li>
+<li>Reservar bien los recursos para evitar problemas de rendimiento.</li>
+<li>Hacer instantáneas para experimentar sin miedo y volver atrás cuando quieras.</li>
+<li>Instalar las Guest Additions para tener más funciones y tener una máquina cómoda de usar.</li>
+</ul>
+<h3 id="bibliografia-y-enlaces-de-interes">Bibliografía y enlaces de interés</h3>
+<ul>
+<li><a href="https://universodigital.org/caracteristicas-de-virtualbox-introduccion/">Universo Digital - Características de VirtualBox</a></li>
+<li><a href="https://www.xataka.com/basics/virtualbox-que-como-usarlo-para-crear-maquina-virtual-windows-u-otro-sistema-operativo">Xataka Basics - VirtualBox: qué es y cómo usarlo</a></li>
+<li><a href="https://antoniovf.wordpress.com/2012/07/13/introduccion-al-software-de-virtualizacion-oracle-virtualbox/">Introducción al software de virtualización Oracle VirtualBox</a></li>
+<li><a href="https://www.studocu.com/co/document/universidad-autonoma-del-caribe/el-rol-de-docente-universitario-del-siglo-xxi/introduccion-a-virtual-box/99286694?sid=e7bb2ac3-b678-4252-a59f-1ee374b7c5a71795544023">Studocu - Introducción a VirtualBox</a></li>
+<li><a href="https://prezi.com/p/brx3ugkljixa/introduccion-a-virtualbox/">Prezi - Introducción a VirtualBox</a></li>
+<li><a href="https://www.studocu.com/es-mx/document/instituto-tecnologico-superior-de-alvarado/programacion-de-base-de-datos/instalalcion-de-virtualbox-">Studocu - Instalación de VirtualBox</a></li>
+<li>[AOMEI Tech - Crear máquina virtual con VirtualBox](</li>
+</ul>
   </div>
 </article>
                                 <div id="bottom-navigation" class="mx-auto flex h-16 w-full max-w-2xl items-center justify-between gap-2 px-4 md:px-0">
@@ -433,6 +495,46 @@ En la siguiente pantalla nos indica que, si queremos usar VirtualBox desde Pytho
         
         <a href="#43-primer-arranque-captura-11" data-active="false" data-depth="3">
             4.3. Primer arranque (captura 11)
+        </a>
+        
+        <a href="#44-crear-la-maquina-virtual-capturas-12-16" data-active="false" data-depth="3">
+            4.4. Crear la máquina virtual (capturas 12 - 16)
+        </a>
+        
+        <a href="#45-uso-de-la-maquina-capturas-17-18" data-active="false" data-depth="3">
+            4.5. Uso de la máquina (capturas 17 - 18)
+        </a>
+        
+        <a href="#46-configuracion-de-la-maquina-virtual-ubuntu-capturas-19-21" data-active="false" data-depth="3">
+            4.6. Configuración de la máquina virtual Ubuntu (capturas 19 - 21)
+        </a>
+        
+        <a href="#47-menus-principales-capturas-22-23" data-active="false" data-depth="3">
+            4.7. Menús principales (capturas 22 - 23)
+        </a>
+        
+        
+
+        
+        <a href="#5-funcionamiento-y-beneficios" data-active="false" data-depth="2">
+            5. Funcionamiento y beneficios
+        </a>
+        
+        
+        <a href="#beneficios-de-usar-la-virtualizacion" data-active="false" data-depth="3">
+            Beneficios de usar la virtualización
+        </a>
+        
+        
+
+        
+        <a href="#6-conclusiones-y-aprendizajes" data-active="false" data-depth="2">
+            6. Conclusiones y aprendizajes
+        </a>
+        
+        
+        <a href="#bibliografia-y-enlaces-de-interes" data-active="false" data-depth="3">
+            Bibliografía y enlaces de interés
         </a>
         
         
