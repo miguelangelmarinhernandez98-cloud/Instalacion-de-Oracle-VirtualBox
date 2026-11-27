@@ -15,6 +15,10 @@
         <link href="css/solid.min.css" rel="stylesheet">
         <link href="css/v4-font-face.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
+        <style>
+            html { scroll-behavior: smooth; }
+            [id] { scroll-margin-top: 70px; }
+        </style>
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -70,8 +74,6 @@
                         <li class="nav-item" data-bs-level="3"><a href="#menus-principales" class="nav-link">4.7. Menús principales</a></li>
                     </ul>
                 </li>
-                <li class="nav-item" data-bs-level="2"><a href="#funcionamiento-beneficios" class="nav-link">5. Funcionamiento y beneficios</a></li>
-                <li class="nav-item" data-bs-level="2"><a href="#conclusiones" class="nav-link">6. Conclusiones y aprendizajes</a></li>
             </ul>
         </li>
     </ul>
@@ -79,7 +81,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<center><h2><strong>Guía de Instalación y Uso de MkDocs: Oracle VirtualBox</strong></h2></center>
+<center><h2 id="guia-virtualbox"><strong>Guía de Instalación y Uso de MkDocs: Oracle VirtualBox</strong></h2></center>
 
 <center><img src="img/portada.jpg" alt="Imagen de VirtualBox" class="img-fluid"></center>
 
@@ -121,9 +123,9 @@
 <p>Acceso de administrador: Es posible que necesites permisos de administrador en el sistema para poder instalar VirtualBox correctamente.</p>
 <p>Conexión a internet: Para poder descargar la última versión de VirtualBox, con sus respectivas imágenes de sistemas operativos.</p>
 
-<p id="instalacion"><strong>4. Instalación y uso.</strong></p>
+<p id="instalacion-uso"><strong>4. Instalación y uso.</strong></p>
 
-<p><strong>4.1. Descarga. (capturas 01 y 02)</strong></p>
+<p id="descarga"><strong>4.1. Descarga. (capturas 01 y 02)</strong></p>
 <p>Entramos en la página oficial de VirtualBox y nos vamos al apartado de descargas, elegimos el sistema operativo en el que queremos el ejecutable, en este caso Windows hosts. La página ofrece la última versión. Una vez hecho, aparece descargado el .exe, lo siguiente sería darle doble clic para comenzar la instalación.</p>
 <div class="my-3 text-center">
     <img src="img/cap01.png" alt="Captura 01 - Página de descarga de VirtualBox" class="img-fluid mb-3 border rounded shadow-sm">
@@ -143,23 +145,24 @@
     <img src="img/cap10.png" alt="Captura 10 - Instalación finalizada" class="img-fluid mb-3 border rounded shadow-sm">
 </div>
 
-<p id="primer_arranque"><strong>4.3. Primer arranque. (captura 11)</strong></p>
+<p id="primer-arranque"><strong>4.3. Primer arranque. (captura 11)</strong></p>
 <p>Se abre el administrador de VirtualBox, esta es la pantalla principal donde aparecerán todos los sistemas operativos que tengas.</p>
 <div class="my-3 text-center">
     <img src="img/cap11.png" alt="Captura 11 - Pantalla principal de VirtualBox" class="img-fluid mb-3 border rounded shadow-sm">
 </div>
 
-<p id="crear_maquina"><strong>4.4. Crear la máquina virtual. (capturas 12-16)</strong></p>
+<p id="crear-vm"><strong>4.4. Crear la máquina virtual. (capturas 12-16)</strong></p>
 <p>Para crear una máquina le damos al botón de “Nueva” y se abren las siguientes pestañas en las que tenemos que configurarlo como queramos. En la primera indicamos el nombre, la carpeta de las máquinas y, si tenemos la imagen ISO del sistema operativo, la seleccionamos. Una vez puesta la ISO, VirtualBox detecta el sistema operativo y su arquitectura. En la siguiente pestaña podemos poner el nombre y la contraseña del usuario y también indicar si queremos instalar las Guest Additions. En la siguiente indicamos cuánta memoria RAM y procesadores queremos utilizar en la máquina y, por último, cuántos GB utilizaremos en el disco duro. Una vez terminado podemos ver que se está iniciando Ubuntu junto con las características configuradas de dicha máquina.</p>
 <div class="my-3 text-center">
     <img src="img/cap12.png" alt="Captura 12 - Nombre y sistema operativo" class="img-fluid mb-3 border rounded shadow-sm">
     <img src="img/cap13.png" alt="Captura 13 - Instalación desatendida y usuario" class="img-fluid mb-3 border rounded shadow-sm">
+
     <img src="img/cap14.png" alt="Captura 14 - Asignación de memoria RAM y CPU" class="img-fluid mb-3 border rounded shadow-sm">
     <img src="img/cap15.png" alt="Captura 15 - Creación de disco duro virtual" class="img-fluid mb-3 border rounded shadow-sm">
     <img src="img/cap16.png" alt="Captura 16 - Resumen e inicio de la máquina" class="img-fluid mb-3 border rounded shadow-sm">
 </div>
 
-<p id="uso_maquina"><strong>4.5. Uso de la máquina. (capturas 17-18)</strong></p>
+<p id="uso-vm"><strong>4.5. Uso de la máquina. (capturas 17-18)</strong></p>
 <p>Vemos que Ubuntu se ha arrancado correctamente y podemos utilizarlo como cualquier otro sistema operativo.</p>
 <p>Cuando apagamos la máquina aparece “Apagada” y la unidad óptica aparece vacía, ya que la ISO ya no se utiliza.</p>
 <div class="my-3 text-center">
@@ -167,7 +170,7 @@
     <img src="img/cap18.png" alt="Captura 18 - Máquina virtual apagada" class="img-fluid mb-3 border rounded shadow-sm">
 </div>
 
-<p id="configuracion_maquina"><strong>4.6. Configuración de la máquina virtual Ubuntu. (capturas 19-21)</strong></p>
+<p id="configuracion-vm"><strong>4.6. Configuración de la máquina virtual Ubuntu. (capturas 19-21)</strong></p>
 <p>Entramos en la configuración de Ubuntu Desktop y podemos destacar varias opciones y modificarlas. Las pestañas de General, Sistema, Almacenamiento y Red son las más destacadas, pudiendo modificar o añadir más almacenamiento o adaptadores de red en las máquinas.</p>
 <div class="my-3 text-center">
     <img src="img/cap19.png" alt="Captura 19 - Configuración General y Sistema" class="img-fluid mb-3 border rounded shadow-sm">
@@ -175,7 +178,7 @@
     <img src="img/cap21.png" alt="Captura 21 - Configuración de Red" class="img-fluid mb-3 border rounded shadow-sm">
 </div>
 
-<p id="menus_principales"><strong>4.7. Menús principales. (capturas 22-23)</strong></p>
+<p id="menus-principales"><strong>4.7. Menús principales. (capturas 22-23)</strong></p>
 <p>En la pestaña inicial, en la parte superior izquierda existen varias pestañas que sirven como menús con distintas opciones. La primera es “Archivo”, donde están las preferencias y ajustes generales, importar y/o exportar servicios virtualizados, herramientas, actualizaciones y advertencias. Después está la pestaña “Máquina”, en la que encontramos acciones como Nueva, para crear una máquina virtual; Clonar, para duplicar una máquina; Mover y Eliminar; y iniciar, pausar, reiniciar y parar las máquinas, entre muchas otras opciones.</p>
 <div class="my-3 text-center">
     <img src="img/cap22.png" alt="Captura 22 - Menú Archivo" class="img-fluid mb-3 border rounded shadow-sm">
